@@ -14,7 +14,9 @@ public class Driver {
 	final String line = System.getProperty("line.separator");
 
 	public static void main(String[] args){
+
 		new Driver();
+
 	}
 	public Driver(){
 		System.out.println("What is your Id? (An Id is a 3-digit code, like 009.)");
@@ -24,6 +26,7 @@ public class Driver {
 		String inputString = "Y";
 		String outputString = null;
 		displayOptions();
+
 		while(!inputString.equalsIgnoreCase("N")){
 			inputString = sc.nextLine();
 
@@ -91,8 +94,8 @@ public class Driver {
 				System.out.println(line+"I did not understand your response."+line);
 				displayOptions();
 			}
-		}
 
+		}
 	}
 
 	//this implementation has been done for you
@@ -104,27 +107,42 @@ public class Driver {
 
 	}
 	void displayNumberOfEmployees() {
-		//implement -- redo the implementation
-		System.out.println("Number of employees is: " + " (Look for other console messages.)"+line+CONTINUE);
+		//implement -- redo the implementation ###### DONE ######
+		int numEmpl = directory.getNumberOfBookstoreEmployees();
+		if(numEmpl >-1)
+		System.out.println("Number of employees is: " +numEmpl+ " (Look for other console messages.)"+line+CONTINUE);
 	}
 
 	void addEmployee(String employeeId){
+		//##### DONE ######
+		directory.addNewEmployee(employeeId);
 		//implement-- redo the implementation
 		//call the corresponding method on StoreDirectory Class
 		System.out.println("Employee added unless a console message says otherwise " + line+CONTINUE);
 	}
 	void addBook(String bookId){
+		//##### DONE ######
+		directory.addNewBook(bookId);
 		//implement -- redo the implementation
 		System.out.println("Book added unless a console message says otherwise " + line+CONTINUE);
 	}
 	void checkIfBookIsInStock(String bookId){
-		//implement -- redo the implementation
-		System.out.println("Yes, book with bookId "+bookId+" is in stock." +" (Look for console messages.)"+line+CONTINUE);
+		//##### DONE ######
+		if(directory.bookIsInStock(bookId)) {
+			//implement -- redo the implementation
+			System.out.println("Yes, book with bookId " + bookId + " is in stock." + " (Look for console messages.)" + line + CONTINUE);
+		}else
+			System.out.println("No, book with bookId " + bookId + " is not in stock." + " (Look for console messages.)" + line + CONTINUE);
 	}
 
 	void checkWhetherFoodItemInMarket(String foodItem){
-		//	implement-- redo the implementation
-		System.out.println("Yes the market carries "+foodItem+line+CONTINUE);
+		//##### DONE ######
+		if(directory.marketCarriesFoodItem(foodItem)) {
+			//	implement-- redo the implementation
+			System.out.println("Yes the market carries " + foodItem + line + CONTINUE);
+		}
+		else
+			System.out.println("NO the market doesn't carries " + foodItem + line + CONTINUE);
 	}
 
 	void displayOptions(){

@@ -98,5 +98,6 @@ class Bookstore {
 		bs.printTheBooks();
 		System.out.println(bs.bookIsInStock("102"));
 		System.out.println(bs.bookIsInStock("106"));
+
 	}
 }

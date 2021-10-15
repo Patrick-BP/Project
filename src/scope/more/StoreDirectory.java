@@ -11,24 +11,26 @@ public class StoreDirectory {
 	public int getNumberOfBooks() {
 		return bookstore.getNumBooks();
 	}
+
 	public int getNumberOfBookstoreEmployees() {
-		//implement
-		return 0;
+		//implement ###### DONE ######
+
+		return bookstore.getNumEmployees();
 	}
 	public boolean addNewEmployee(String employeeId){
-		//implement
-		return true;
+		//implement ###### DONE ######
+		return bookstore.addNewEmployee(employeeId);
 	}
 	public boolean bookIsInStock(String bookId){
-		//implement
-		return true;
+		//implement ###### DONE ######
+		return bookstore.bookIsInStock(bookId);
 	}
 	public boolean addNewBook(String bookId){
-		//implement
-		return true;
+		//implement ###### DONE ######
+		return bookstore.addNewBook2(bookId);
 	}
 	public boolean marketCarriesFoodItem(String foodItem){
-		//implement
-		return true;
+		//implement ###### DONE ######
+		return market.carriesFoodItem(foodItem);
 	}
 }
