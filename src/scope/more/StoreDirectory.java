@@ -13,24 +13,23 @@ public class StoreDirectory {
 	}
 
 	public int getNumberOfBookstoreEmployees() {
-		//implement ###### DONE ######
 
 		return bookstore.getNumEmployees();
 	}
 	public boolean addNewEmployee(String employeeId){
-		//implement ###### DONE ######
+
 		return bookstore.addNewEmployee(employeeId);
 	}
 	public boolean bookIsInStock(String bookId){
-		//implement ###### DONE ######
+
 		return bookstore.bookIsInStock(bookId);
 	}
 	public boolean addNewBook(String bookId){
-		//implement ###### DONE ######
+
 		return bookstore.addNewBook2(bookId);
 	}
 	public boolean marketCarriesFoodItem(String foodItem){
-		//implement ###### DONE ######
+
 		return market.carriesFoodItem(foodItem);
 	}
 }
