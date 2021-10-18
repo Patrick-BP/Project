@@ -32,4 +32,7 @@ public class StoreDirectory {
 
 		return market.carriesFoodItem(foodItem);
 	}
+	public boolean validUserId(String userId){
+		return Ids.isGoodId(userId);
+	}
 }

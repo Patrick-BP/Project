@@ -19,8 +19,13 @@ public class Driver {
 
 	}
 	public Driver(){
+		directory=new StoreDirectory(" ");
 		System.out.println("What is your Id? (An Id is a 3-digit code, like 009.)");
 		String userId = sc.nextLine();
+		while(!directory.validUserId(userId)){
+			System.out.println("Invalid User Id. Please try again");
+			userId=sc.nextLine();
+		}
 		this.userID = userId;
 		directory = new StoreDirectory(this.userID);
 		String inputString = "Y";
